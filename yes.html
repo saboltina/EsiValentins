@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You!</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: #f2f7ff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px 20px;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+        }
+        header {
+            background-color: #EA3B52;
+            color: white;
+            padding: 15px;
+            border-radius: 10px 10px 0 0;
+        }
+        h1 {
+            font-size: 2em;
+        }
+        .content img {
+            width: 150px;
+            margin-top: 20px;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Heart Snow Effect */
+        .heart-snow {
+            position: absolute;
+            top: -50px;
+            left: 50%;
+            font-size: 30px;
+            color: red;
+            animation: snow 5s infinite;
+            opacity: 0.7;
+        }
+
+        @keyframes snow {
+            0% {
+                transform: translateX(-50%) translateY(0);
+            }
+            100% {
+                transform: translateX(-50%) translateY(100vh);
+            }
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <header>
+            <h1>Uraa, MĪLU TEVI Viesturiņ!</h1>
+        </header>
+        <div class="content">
+            <img class="heart" src="https://i.pinimg.com/originals/dc/15/9d/dc159d5c6e618b345e234b6ed9e8b4af.gif" alt="Heart Animation">
+            <p>Ļoti priecājos un nevaru sagaidīt 14.februāri!</p>
+        </div>
+    </div>
+
+    <!-- Heart Snow Elements -->
+    <div class="heart-snow" style="animation-delay: 0s;">❤️</div>
+    <div class="heart-snow" style="animation-delay: 1s;">❤️</div>
+    <div class="heart-snow" style="animation-delay: 2s;">❤️</div>
+    <div class="heart-snow" style="animation-delay: 3s;">❤️</div>
+    <div class="heart-snow" style="animation-delay: 4s;">❤️</div>
+</body>
+</html>

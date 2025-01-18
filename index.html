@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine?</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff7f5;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            animation: fadeIn 2s ease;
+            position: relative;
+            z-index: 1;
+        }
+        header {
+            background-color: #e74560;
+            color: white;
+            padding: 15px;
+            border-radius: 10px 10px 0 0;
+        }
+        h1 {
+            font-size: 2em;
+            margin: 0;
+        }
+        .content {
+            padding: 30px 20px;
+        }
+        .content p {
+            font-size: 1.2em;
+            color: #333;
+        }
+        .buttons {
+            margin-top: 30px;
+        }
+        .button {
+            background-color: #e74560;
+            color: white;
+            font-size: 1.1em;
+            border: none;
+            padding: 12px 30px;
+            margin: 10px;
+            cursor: pointer;
+            transition: transform 0.2s;
+            border-radius: 8px;
+        }
+        .button:hover {
+            transform: scale(1.1);
+        }
+        .button:focus {
+            outline: none;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Heart Snow Effect */
+        .heart-snow {
+            position: absolute;
+            top: -50px;
+            left: 50%;
+            font-size: 30px;
+            color: red;
+            animation: snow 5s infinite;
+            opacity: 0.7;
+        }
+
+        @keyframes snow {
+            0% {
+                transform: translateX(-50%) translateY(0);
+            }
+            100% {
+                transform: translateX(-50%) translateY(100vh);
+            }
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            .content p {
+                font-size: 1em;
+            }
+            .button {
+                font-size: 1em;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card" data-aos="fade-up">
+        <header>
+            <h1>Vai būsi mans Valentīns?</h1>
+        </header>
+        <div class="content">
+            <img src="https://private-user-images.githubusercontent.com/159614454/404529261-b7daf058-6f7a-4496-88a1-7c13c8fe3c77.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzcxOTc2NzcsIm5iZiI6MTczNzE5NzM3NywicGF0aCI6Ii8xNTk2MTQ0NTQvNDA0NTI5MjYxLWI3ZGFmMDU4LTZmN2EtNDQ5Ni04OGExLTdjMTNjOGZlM2M3Ny5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwMTE4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDExOFQxMDQ5MzdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0xMTMwZGRhOTJlYzViMmI2MWYyZjRiNjhiZTUwMTVjMzkzOWM1MjJmZDJmYjIyYzkwYjBmM2M5NmU2MmFkYWI0JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.Z73ePYYRWflHg3wAGBELBi1nbMNlx4XxW8aUHn6uFGI" alt="Heart Image" width="250">
+            <p>Mīļo Viestur,</p>
+            <p>Daudz domāju par tevi, izdomāju laicīgi pajautāt, lai mums būtu amazing 14.februāris kopā. </p>
+			<p>Vai pavadīsi ar mani kopā Valentīndienu?</p>
+            <div class="buttons">
+                <button class="button" onclick="window.location.href='yes.html'">Jā</button>
+                <button class="button" onclick="window.location.href='no.html'">Nē</button>
+				 
+        </div>
+    </div>
+
+    <!-- Heart Snow Elements -->
+    <div class="heart-snow" style="animation-delay: 0s;">❤️</div>
+    <div class="heart-snow" style="animation-delay: 1s;">❤️</div>
+    <div class="heart-snow" style="animation-delay: 2s;">❤️</div>
+    <div class="heart-snow" style="animation-delay: 3s;">❤️</div>
+    <div class="heart-snow" style="animation-delay: 4s;">❤️</div>
+
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

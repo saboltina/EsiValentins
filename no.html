@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oh No!</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px 20px;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        header {
+            background-color: #6495ED;
+            color: white;
+            padding: 15px;
+            border-radius: 10px 10px 0 0;
+        }
+        h1 {
+            font-size: 2em;
+        }
+        .content img {
+            width: 300px;
+            margin-top: 20px;
+        }
+        
+        /* Crying Emoji Rain */
+        .crying-emoji {
+            position: absolute;
+            font-size: 40px;
+            opacity: 0.8;
+            animation: fall 5s infinite linear;
+        }
+        
+        @keyframes fall {
+            0% {
+                top: -40px;
+                left: calc(100% * var(--random-x));
+            }
+            100% {
+                top: 100vh;
+                left: calc(100% * var(--random-x));
+            }
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <header>
+            <h1>Ak nē.. kā tu man šitā?!</h1>
+        </header>
+        <div class="content">
+            <img class="meme" src="https://www.gifcen.com/wp-content/uploads/2021/02/crying-gif-10.gif" alt="Sad Meme">
+            <p>It's okay..gan nepārdzīvošu:/</p>
+        </div>
+    </div>
+
+    <!-- Crying Emoji Rain Effect -->
+    <div class="crying-emoji" style="--random-x: 0.1;">😭</div>
+    <div class="crying-emoji" style="--random-x: 0.3;">😭</div>
+    <div class="crying-emoji" style="--random-x: 0.5;">😭</div>
+    <div class="crying-emoji" style="--random-x: 0.7;">😭</div>
+    <div class="crying-emoji" style="--random-x: 0.9;">😭</div>
+    
+    <script>
+        // Optional: Adjust the number of crying emojis for the rain effect dynamically
+        const emojisCount = 20;
+        for (let i = 0; i < emojisCount; i++) {
+            const emoji = document.createElement('div');
+            emoji.classList.add('crying-emoji');
+            emoji.innerText = '😭';
+            emoji.style.setProperty('--random-x', Math.random());
+            document.body.appendChild(emoji);
+        }
+    </script>
+</body>
+</html>
